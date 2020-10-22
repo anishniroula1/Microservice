@@ -1,0 +1,24 @@
+type Query {
+    users: [UserProfile]
+    userByUsername(username: String): UserProfile
+    checkUsernameExist(username: String): String
+    checkEmailExist(email:String): String
+}
+
+type UserProfile {
+    id: Int
+    firstName: String
+    lastName: String
+    email: String
+    role: String
+    username: ID
+    accountCreatedDateTime: String
+    gender: String
+    phoneNumber: String
+    dateOfBirth: String
+    profilePicture: String
+}
+
+type Mutation {
+#    uploadProfilePic(image: Upload, username: String): String
+}
